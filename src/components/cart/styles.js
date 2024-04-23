@@ -18,6 +18,10 @@ export const CartContainer = styled.div`
   p {
     color: #222222;
   }
+
+  svg {
+    color: #222222;
+  }
 `;
 
 export const CartEscapeArea = styled.div`
