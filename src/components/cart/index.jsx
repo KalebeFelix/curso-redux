@@ -5,11 +5,12 @@ import CartItem from "../cart-item/index.jsx";
 // Styles
 import * as Styles from "./styles";
 import {selectProductsTotalPrice} from "../../redux/cart/cart.selectors.js";
+import { cartSelectors } from "../../redux/cart/slice.js";
 
 const Cart = ({isVisible, setIsVisible}) => {
     const handleEscapeAreaClick = () => setIsVisible(false);
 
-    const {products} = useSelector((rootReducer) => rootReducer.cartReducer);
+    const {products} = useSelector(cartSelectors);
 
     const productsTotalPrice = useSelector(selectProductsTotalPrice);
 
